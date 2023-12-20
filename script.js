@@ -25,18 +25,14 @@ function createNewGrid() {
   const input = window.prompt(
     "Please enter the desired grid size (1-64).\nThe default 16 generates a 16*16 grid."
   );
-
-  let newGridSize = parseInt(input); // Convert the input to an integer
-
-  // Check if the input is a number and within the range 1-64
+  let newGridSize = parseInt(input);
   if (!isNaN(newGridSize) && newGridSize >= 1 && newGridSize <= 64) {
     console.log("Valid input. Grid size: ", newGridSize);
-    // Proceed with using newGridSize for your grid
   } else {
     console.log("Invalid input. Using default size: 16");
     newGridSize = 16;
-    // Use the default size or handle the error as needed
   }
+
   const container = document.querySelector(".container");
   container.innerHTML = "";
   //   const squares = document.querySelectorAll(".square");
@@ -55,5 +51,4 @@ function clearGrid() {
 window.onload = () => {
   setUpGrid(DEFAULT_SIZE);
   activateButton();
-  //   activateButton(DEFAULT_MODE);
 };

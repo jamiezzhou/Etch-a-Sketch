@@ -1,38 +1,47 @@
 .body {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 100px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+    justify-content: center; /* Changed to center the content */
+    gap: 100px; /* Reduced gap for better spacing */
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50px; /* Added padding */
+}
 
 .h1 {
     color: #5f9ea0;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
-    
 }
 
 .button {
+    background-color: white; /* Background color */
     color: cadetblue;
     padding: 10px 25px; 
-    size: 30px;
     font-size: 20px;
+    border: 2px solid cadetblue; /* Border styling */
     border-radius: 5px;
+    cursor: pointer; /* Cursor on hover */
     font-family: 'Courier New', Courier, monospace;
 }
 
+.button:hover {
+    background-color: cadetblue; /* Hover effect */
+    color: white;
+}
+
 .container {
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    justify-content: start; /* Align grid items to start */
     background-color: gainsboro;
-    width: 500px;
-    height: 500px;
+    width: 550px; /* Adjusted to fit 16x16 grid including borders */
+    height: 550px;
+    border: 2px solid #5f9ea0; /* Container border */
 }
 
 .square {
-    justify-content: center;
-    border: 1px solid lightgray; /* Adjust as needed */
+    border: 1px solid lightgray;
 }
